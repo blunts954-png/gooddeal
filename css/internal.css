@@ -1,0 +1,427 @@
+/* =========================================================
+   A & M PUMPING — Internal Page Styles
+   ========================================================= */
+
+.page-hero {
+    padding: calc(var(--header-h) + var(--emergency-bar-h) + 68px) 0 72px;
+    background:
+        radial-gradient(ellipse 78% 58% at 65% -6%, rgba(21, 101, 192, 0.22) 0%, transparent 58%),
+        linear-gradient(180deg, var(--gray-950) 0%, var(--gray-900) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.page-hero::before {
+    content: '';
+    position: absolute;
+    inset: auto 8% 8% auto;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(41, 182, 246, 0.14) 0%, transparent 68%);
+    filter: blur(18px);
+}
+
+.page-hero-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+    gap: 48px;
+    align-items: center;
+}
+
+.page-breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 0.82rem;
+    color: var(--gray-500);
+    margin-bottom: 18px;
+}
+
+.page-breadcrumb a {
+    color: var(--accent-light);
+}
+
+.page-breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.page-hero-copy h1 {
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    color: var(--white);
+    margin-bottom: 16px;
+}
+
+.page-hero-copy p {
+    color: var(--gray-300);
+    font-size: 1.02rem;
+    line-height: 1.8;
+    max-width: 620px;
+}
+
+.page-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 28px;
+}
+
+.page-hero-notes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.page-note {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    border-radius: var(--radius-full);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--gray-200);
+    font-size: 0.86rem;
+}
+
+.page-note svg {
+    color: var(--accent-light);
+    flex-shrink: 0;
+}
+
+.page-hero-media {
+    position: relative;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    min-height: 390px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: linear-gradient(180deg, rgba(21, 101, 192, 0.12), rgba(15, 21, 34, 0.82));
+    box-shadow: var(--shadow-xl);
+}
+
+.page-hero-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.page-hero-overlay {
+    position: absolute;
+    inset: auto 18px 18px 18px;
+    padding: 18px 20px;
+    border-radius: var(--radius-lg);
+    background: rgba(10, 14, 26, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+}
+
+.page-hero-overlay strong {
+    display: block;
+    color: var(--white);
+    margin-bottom: 4px;
+}
+
+.page-hero-overlay span {
+    color: var(--gray-300);
+    font-size: 0.88rem;
+    line-height: 1.6;
+}
+
+.content-section {
+    padding: 84px 0;
+    background: var(--gray-950);
+}
+
+.content-section.alt {
+    background: var(--gray-900);
+}
+
+.metric-grid,
+.simple-card-grid,
+.review-grid-static,
+.area-card-grid,
+.stats-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.metric-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.simple-card-grid,
+.review-grid-static,
+.stats-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.area-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.metric-card,
+.simple-card,
+.area-card,
+.stat-card,
+.spotlight-card,
+.service-detail,
+.legal-card {
+    background: var(--gray-800);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: var(--radius-xl);
+}
+
+.metric-card,
+.simple-card,
+.area-card,
+.stat-card,
+.spotlight-card,
+.legal-card {
+    padding: 28px;
+}
+
+.metric-card strong,
+.stat-card strong {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 2rem;
+    line-height: 1;
+    color: var(--white);
+    margin-bottom: 10px;
+}
+
+.metric-card span,
+.stat-card span {
+    display: block;
+    color: var(--accent-light);
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.metric-card p,
+.simple-card p,
+.area-card p,
+.stat-card p,
+.spotlight-card p,
+.legal-card p,
+.legal-card li {
+    color: var(--gray-400);
+    font-size: 0.92rem;
+    line-height: 1.75;
+}
+
+.simple-card h3,
+.area-card h3,
+.spotlight-card h3,
+.legal-card h2,
+.legal-card h3 {
+    color: var(--white);
+    font-size: 1.18rem;
+    margin-bottom: 12px;
+}
+
+.simple-card svg,
+.area-card svg {
+    color: var(--accent-light);
+    margin-bottom: 14px;
+}
+
+.service-stack {
+    display: grid;
+    gap: 28px;
+}
+
+.service-detail {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+    gap: 28px;
+    padding: 34px;
+    scroll-margin-top: 120px;
+}
+
+.service-detail h2 {
+    color: var(--white);
+    font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+    margin-bottom: 14px;
+}
+
+.service-detail p {
+    color: var(--gray-300);
+    font-size: 0.96rem;
+    line-height: 1.8;
+    margin-bottom: 14px;
+}
+
+.service-detail-media {
+    min-height: 280px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: linear-gradient(180deg, rgba(21, 101, 192, 0.18), rgba(15, 21, 34, 0.9));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.service-detail-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.service-pills,
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.pill,
+.tag-list span {
+    padding: 7px 12px;
+    border-radius: var(--radius-full);
+    background: rgba(41, 182, 246, 0.1);
+    border: 1px solid rgba(41, 182, 246, 0.22);
+    color: var(--accent-light);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+.checklist,
+.legal-list {
+    list-style: none;
+    display: grid;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.checklist li,
+.legal-list li {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    color: var(--gray-300);
+    font-size: 0.92rem;
+    line-height: 1.7;
+}
+
+.checklist svg,
+.legal-list svg {
+    color: var(--accent-light);
+    flex-shrink: 0;
+    margin-top: 4px;
+}
+
+.area-card {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.area-card a {
+    color: var(--accent-light);
+    font-weight: 700;
+}
+
+.area-card a:hover {
+    text-decoration: underline;
+}
+
+.review-grid-static .review-card {
+    min-height: 100%;
+}
+
+.review-highlight {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 320px;
+    gap: 24px;
+    align-items: start;
+}
+
+.legal-shell {
+    padding: calc(var(--header-h) + var(--emergency-bar-h) + 64px) 0 84px;
+    background: linear-gradient(180deg, var(--gray-950) 0%, var(--gray-900) 100%);
+}
+
+.legal-stack {
+    display: grid;
+    gap: 22px;
+    max-width: 900px;
+}
+
+.legal-card ul,
+.legal-card ol {
+    margin-top: 14px;
+    margin-left: 18px;
+}
+
+.legal-card li + li {
+    margin-top: 10px;
+}
+
+.inline-link {
+    color: var(--accent-light);
+    font-weight: 600;
+}
+
+.inline-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+    .page-hero-grid,
+    .service-detail,
+    .review-highlight {
+        grid-template-columns: 1fr;
+    }
+
+    .metric-grid,
+    .simple-card-grid,
+    .review-grid-static,
+    .stats-grid,
+    .area-card-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 720px) {
+    .page-hero {
+        padding-top: calc(var(--header-h) + var(--emergency-bar-h) + 52px);
+        padding-bottom: 56px;
+    }
+
+    .page-hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .page-hero-actions .btn {
+        justify-content: center;
+    }
+
+    .metric-grid,
+    .simple-card-grid,
+    .review-grid-static,
+    .stats-grid,
+    .area-card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-detail,
+    .metric-card,
+    .simple-card,
+    .area-card,
+    .stat-card,
+    .spotlight-card,
+    .legal-card {
+        padding: 22px;
+    }
+
+    .page-hero-media {
+        min-height: 280px;
+    }
+}

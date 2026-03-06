@@ -1,0 +1,257 @@
+/* =========================================================
+   A & M PUMPING — Location Page Shared Styles
+   ========================================================= */
+
+.location-hero {
+    padding: calc(var(--header-h) + var(--emergency-bar-h) + 60px) 0 80px;
+    background: radial-gradient(ellipse 80% 60% at 60% -10%, rgba(21, 101, 192, 0.22) 0%, transparent 60%),
+        linear-gradient(180deg, var(--gray-950) 0%, var(--gray-900) 100%);
+}
+
+.location-hero-content {
+    max-width: 680px;
+}
+
+.location-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8rem;
+    color: var(--gray-500);
+    margin-bottom: 20px;
+}
+
+.location-breadcrumb a {
+    color: var(--accent-light);
+}
+
+.location-breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.location-hero h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: var(--white);
+    margin-bottom: 16px;
+}
+
+.location-hero p {
+    color: var(--gray-300);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 32px;
+}
+
+.location-hero-ctas {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.location-hero-badge {
+    margin-top: 40px;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.lh-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.82rem;
+    color: var(--gray-400);
+}
+
+.lh-badge svg {
+    color: var(--accent-light);
+}
+
+/* Local SEO Content Block */
+.location-content-section {
+    padding: 80px 0;
+    background: var(--gray-950);
+}
+
+.location-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 60px;
+    align-items: start;
+}
+
+.location-article h2 {
+    font-size: 1.6rem;
+    color: var(--white);
+    margin: 32px 0 12px;
+}
+
+.location-article h2:first-child {
+    margin-top: 0;
+}
+
+.location-article p {
+    color: var(--gray-400);
+    font-size: 0.9rem;
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+.location-article strong {
+    color: var(--white);
+}
+
+.location-article ul {
+    margin: 12px 0 20px 20px;
+    list-style: disc;
+}
+
+.location-article ul li {
+    color: var(--gray-400);
+    font-size: 0.9rem;
+    line-height: 1.8;
+    list-style: disc;
+}
+
+/* Sidebar Location */
+.location-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: sticky;
+    top: calc(var(--header-h) + var(--emergency-bar-h) + 24px);
+}
+
+.location-contact-card {
+    background: var(--gray-800);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.location-contact-card h3 {
+    font-size: 1rem;
+    color: var(--white);
+}
+
+.location-contact-card p {
+    font-size: 0.85rem;
+    color: var(--gray-400);
+    line-height: 1.6;
+}
+
+.zip-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.zip-tag {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--accent-light);
+    background: rgba(41, 182, 246, 0.1);
+    border: 1px solid rgba(41, 182, 246, 0.2);
+    padding: 4px 10px;
+    border-radius: var(--radius-full);
+}
+
+/* Nearby locations */
+.nearby-locations {
+    padding: 64px 0;
+    background: var(--gray-900);
+}
+
+.nearby-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 40px;
+}
+
+.nearby-card {
+    background: var(--gray-800);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: var(--radius-lg);
+    padding: 20px;
+    text-align: center;
+    transition: all var(--transition-base);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.nearby-card:hover {
+    border-color: rgba(21, 101, 192, 0.4);
+    transform: translateY(-4px);
+}
+
+.nearby-card svg {
+    color: var(--primary-light);
+}
+
+.nearby-card h4 {
+    font-size: 0.9rem;
+    color: var(--white);
+}
+
+.nearby-card p {
+    font-size: 0.75rem;
+    color: var(--gray-500);
+}
+
+/* Service list */
+.location-services {
+    padding: 64px 0;
+    background: var(--gray-950);
+}
+
+.location-services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 40px;
+}
+
+@media (max-width: 1024px) {
+    .location-content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .location-sidebar {
+        position: static;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .location-contact-card {
+        flex: 1;
+        min-width: 240px;
+    }
+
+    .nearby-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .location-services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .nearby-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .location-services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .location-hero-ctas {
+        flex-direction: column;
+    }
+}
